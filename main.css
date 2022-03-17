@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-weight: 600;
+}
+::placeholder{
+    color: #fff;
+    text-align: center;
+}
+.hidden{
+    visibility: hidden;
+}
+.label{
+    font-size: .8em;
+    color: hsl(186, 14%, 43%);
+}
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pad{
+    padding: .5em 1.5em .5em .5em;
+}
+.bigtext{
+    font-size: 30px;
+    color: hsl(172, 67%, 45%);
+}
+.smalltext{
+    font-size: 12px;
+}
+
+/*custom input elements*/
+.custom-input{
+    position: relative;
+    /* padding-top: 0.3em; */
+}
+.custom-input .icon-container{
+    position: absolute;
+}
+.custom-input input{
+    font-size:18px;
+    font-weight: bold;
+    color:hsl(183, 100%, 15%);
+    height: 2.3em;
+    width: 100%;
+    padding: 0 1em 0 2em;
+    border:none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+}
+.custom-input input:focus{
+    outline: none;
+    border: 1px solid hsl(172, 67%, 45%);
+}
+.icon-container{
+    height: 100%;
+    width: 2em;
+}
+
+.container{
+    height: 100vh;
+}
+.wrapper{
+    width: 50%;
+    min-width: 650px;
+    height: 100%;
+}
+.logo{
+    height: 20%;
+}
+.calculator{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5em;
+}
+.right-pane{
+    height: 100%;
+    width: 100%;
+    background-color: hsl(183, 100%, 15%);
+    color:hsl(0, 0%, 100%);
+    border-radius: .5em;
+}
+
+/*tip selector*/
+.tip-selector{
+    margin: 2em 0;
+    display: grid;
+    grid-template-rows: auto 2.3em 2.3em;
+    gap:.6em;
+}
+.tip-selector label{
+    grid-column: 1/4;
+}
+.tip{
+    background-color: hsl(183, 100%, 15%);
+    padding: 0.5em;
+    color: #fff;
+    border-radius: 0.3em;
+}
+.tip-selector input{
+    text-align: right;
+    color: #fff;
+    border: none;
+}
+.selected{
+    background-color: hsl(172, 67%, 45%);
+ }
+
+.labelwarning{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.warning{
+    color: red;
+    text-align: right;
+}
+
+/*right pane*/
+.right-pane{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    align-items: center;
+    padding: 1em 1.5em;
+}
+.right-pane .button{
+    grid-column: span 2;
+    background-color: hsl(172, 67%, 45%);
+    text-align: center;
+    padding: 6px;
+    border-radius: 0.3em;
+    color: hsl(183, 100%, 15%);
+}
+
+@media all and (max-width:650px){
+    .calculator{
+        grid-template-columns: 1fr;
+    }
+    .wrapper{
+        width: 100%;
+        min-width: 375px;
+    }
+    .right-pane{
+        margin-top: 20px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

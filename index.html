@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <script src="calculator.js" type="module"></script>
+  <script src="app.js" type="module"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container centered">
+    <div class="wrapper ">
+      <div class="logo centered">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="calculator">
+
+        <div class="left-pane pad">
+
+          <section class="separator">
+            <label for="bill" class="label">Bill</label>
+
+            <div class="custom-input">
+              <div class="icon-container centered">
+                <img src="images/icon-dollar.svg" alt="">
+              </div>
+              <input inputmode="numeric" id="bill">
+            </div>
+          </section>
+
+          <section class="tip-selector">
+            <label for="select-tip" class="label">Select Tip %</label>
+            <div class="tip centered">5%</div>
+            <div class="tip centered selected" data-value="10">10%</div>
+            <div class="tip centered">15%</div>
+            <div class="tip centered">25%</div>
+            <div class="tip centered">50%</div>
+            <input inputmode="numeric" class="tip centered" size="1" placeholder="Custom" />
+          </section>
+
+          <section class="separator">
+            <div class="labelwarning">
+              <label for="people"  class="label">Number of People</label>
+              <label for="warning" class="warning smalltext hidden">Can´t be zero.</label>
+            </div>
+
+            <div class="custom-input">
+              <div class="icon-container centered">
+                <img src="images/icon-person.svg" alt="">
+              </div>
+              <input type="text" id="totalpeople" value="1">
+            </div>
+          </section>
+        </div>
+
+        <div class="right-pane">
+          <div>
+            <label class="smalltext">Tip Amount</label><br>
+            <label class="label">/person</label>
+          </div>
+          <div id="tip-amount" class="centered bigtext">
+            $0.00
+          </div>
+
+          <div>
+            <label class="smalltext">Total</label><br>
+            <label class="label">/person</label>
+          </div>
+          <div id="total" class="centered bigtext">
+            $0.00
+          </div>
+
+          <div></div>
+          <div></div>
+
+          <div class="button">RESET</div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Dany Sánchez</a>.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
