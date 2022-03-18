@@ -8,8 +8,6 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <script src="calculator.js" type="module"></script>
-  <script src="app.js" type="module"></script>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,23 +23,22 @@
 
           <section class="separator">
             <label for="bill" class="label">Bill</label>
-
             <div class="custom-input">
               <div class="icon-container centered">
                 <img src="images/icon-dollar.svg" alt="">
               </div>
-              <input inputmode="numeric" id="bill">
+              <input inputmode="numeric" id="bill" class="general-input">
             </div>
           </section>
 
-          <section class="tip-selector">
+          <section class="tip-selector" id="tip-selector">
             <label for="select-tip" class="label">Select Tip %</label>
-            <div class="tip centered">5%</div>
+            <div class="tip centered" data-value="5">5%</div>
             <div class="tip centered selected" data-value="10">10%</div>
-            <div class="tip centered">15%</div>
-            <div class="tip centered">25%</div>
-            <div class="tip centered">50%</div>
-            <input inputmode="numeric" class="tip centered" size="1" placeholder="Custom" />
+            <div class="tip centered" data-value="15">15%</div>
+            <div class="tip centered" data-value="25">25%</div>
+            <div class="tip centered" data-value="50">50%</div>
+            <input inputmode="numeric" class="tip centered" size="1" placeholder="Custom" id="customtip"/>
           </section>
 
           <section class="separator">
@@ -54,7 +51,7 @@
               <div class="icon-container centered">
                 <img src="images/icon-person.svg" alt="">
               </div>
-              <input type="text" id="totalpeople" value="1">
+              <input type="text" id="totalpeople" class="general-input">
             </div>
           </section>
         </div>
@@ -79,7 +76,7 @@
           <div></div>
           <div></div>
 
-          <div class="button">RESET</div>
+          <div class="button" id="reset">RESET</div>
         </div>
       </div>
 
@@ -90,5 +87,7 @@
     </div>
   </div>
 
+  <script src="calculator.js" type="module"></script>
+  <script src="app.js" type="module"></script>
 </body>
 </html>
