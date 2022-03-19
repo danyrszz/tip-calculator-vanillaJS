@@ -34,7 +34,9 @@ body{
 .smalltext{
     font-size: 12px;
 }
-
+.selectable{
+    cursor: pointer;
+}
 /*custom input elements*/
 .custom-input{
     position: relative;

@@ -21,8 +21,8 @@ reset.addEventListener("click", clear);
 
 const calculator = new Calculator();
 const calculate = function(){
-    tipAmount.textContent = calculator.getTipAmount(bill.value,tipSelected,totalPeople.value);
-    total.textContent = calculator.getTotal(bill.value,tipSelected,totalPeople.value);
+    tipAmount.textContent = "$" + calculator.getTipAmount(bill.value,tipSelected,totalPeople.value);
+    total.textContent = "$"+ calculator.getTotal(bill.value,tipSelected,totalPeople.value);
 }
 
 function setTotalPeople(e){
@@ -37,7 +37,7 @@ function setTotalPeople(e){
 function setBill(e){
     warning.classList.add("hidden");
     bill.classList.remove("input-alert");
-    let value = parseInt (e.target.value);
+    let value = parseFloat (e.target.value);
     if(validate(value, e.target) && totalPeople.value!=""){
         calculate();
     }
